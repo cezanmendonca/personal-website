@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0f0a; /* Dark green Matrix-style */
+  color: #e0ffe0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  margin-top: 15vh;
+  z-index: 2;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #00ffcc; /* Neon cyan */
+}
+
+.tagline {
+  font-size: 1.4rem;
+  color: #66ffcc;
+}
+
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.icon {
+  position: absolute;
+  width: 48px;
+  opacity: 0.8;
+  animation: float 12s infinite linear;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: rgba(0, 255, 128, 0.1);
+  padding: 10px;
+}
+
+footer a img {
+  filter: invert(100%);
+  transition: transform 0.3s ease;
+}
+
+footer a img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(100px);
+    opacity: 0;
+  }
+}
